@@ -1,3 +1,7 @@
 function sum(m, n) {
-  // ваш код...
+  return typeof m === `number` && typeof n === `number`
+    ? m + n
+    : `Введите числа`;
 }
+console.log(sum(3, 4));
+console.log(sum(3, `Ivan`));
