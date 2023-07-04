@@ -6,15 +6,18 @@ function print(text) {
 }
 
 /**
- * Эту функцию нужно поменять так,
+ * Эту функцию нужно поменять так, || name.length >= 4 || !name.includes(" ")
  * чтобы функция sayHello работала корректно
  * Необходимо, чтобы на сайте можно было поприветствовать только пользователей, которые удовлетворяют следующему условию – имя не пустое, без пробелов, минимум 4 символа.
  */
 function isValid(name) {
-  if (name.length !== 0 || name.length >= 4 || !name.includes(" ")) {
-    return true;
-  }
-  return false;
+  if (name === null) {
+    return false;
+  } else if (name.length < 4) {
+    return false;
+  } else if (name.includes(" ")) {
+    return false;
+  } else return true;
 }
 
 function sayHello(userName) {
