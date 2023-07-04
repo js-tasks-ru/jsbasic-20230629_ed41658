@@ -9,13 +9,18 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  if (name.lenght !== 0 && name.lenght >= 4 && !name.includes(" ")) {
+function isValid(userName) {
+  if (
+    userName.length !== 0 &&
+    userName.length >= 4 &&
+    !userName.includes(" ")
+  ) {
     return true;
   }
+  return false;
 }
 
-function sayHello() {
+function sayHello(userName) {
   let userName = prompt("Введите ваше имя");
 
   if (isValid(userName)) {

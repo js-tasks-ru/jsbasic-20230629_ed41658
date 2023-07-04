@@ -1,8 +1,12 @@
 function ucFirst(str) {
   if (typeof str === "string") {
-    return str.length === 1
-      ? str.toUpperCase()
-      : str[0].toUpperCase() + str.slice(1);
+    if (str.length === 0) {
+      return "";
+    } else if (str.length === 1) {
+      return str.toUpperCase();
+    } else {
+      return str[0].toUpperCase() + str.slice(1);
+    }
   }
 }
 
