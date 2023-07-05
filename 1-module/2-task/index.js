@@ -6,9 +6,16 @@ function print(text) {
 }
 
 /**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- * Необходимо, чтобы на сайте можно было поприветствовать только пользователей, которые удовлетворяют следующему условию – имя не пустое, без пробелов, минимум 4 символа.
+function isValid(userName) {
+  if (
+    userName.length !== 0 &&
+    userName.length >= 4 &&
+    !userName.includes(" ")
+  ) {
+    return true;
+  }
+  return false;
+}
  */
 function isValid(name) {
   if (
@@ -21,9 +28,8 @@ function isValid(name) {
   return false;
 }
 
-function sayHello(userName) {
+function sayHello() {
   let userName = prompt("Введите ваше имя");
-
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
   } else {
