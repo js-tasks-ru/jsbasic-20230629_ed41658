@@ -6,19 +6,33 @@ function print(text) {
 }
 
 /**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
+function isValid(userName) {
+  if (
+    userName.length !== 0 &&
+    userName.length >= 4 &&
+    !userName.includes(" ")
+  ) {
+    return true;
+  }
+  return false;
+}
  */
 function isValid(name) {
-  // ваш код...
+  if (
+    typeof name == "string" &&
+    name.length >= 4 &&
+    name.split(" ")[0] == name
+  ) {
+    return true;
+  }
+  return false;
 }
 
 function sayHello() {
-  let userName = prompt('Введите ваше имя');
-
+  let userName = prompt("Введите ваше имя");
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
   } else {
-    print('Некорректное имя');
+    print("Некорректное имя");
   }
 }
