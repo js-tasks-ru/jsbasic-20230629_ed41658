@@ -25,6 +25,7 @@ function isValid(name) {
   ) {
     return true;
   }
+
   return false;
 }
 
