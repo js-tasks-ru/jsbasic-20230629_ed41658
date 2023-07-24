@@ -1,9 +1,5 @@
 function toggleText() {
-  button = document.querySelector(".toggle-text-button");
-  tekstik = document.getElementById("text");
-  button.addEventListener("click", () =>
-    tekstik.hidden === false
-      ? (tekstik.hidden = true)
-      : (tekstik.hidden = false)
-  );
+  const button = document.querySelector(".toggle-text-button");
+  const text = document.getElementById("text");
+  button.addEventListener("click", () => (text.hidden = !text.hidden));
 }
